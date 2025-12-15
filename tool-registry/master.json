@@ -1,0 +1,123 @@
+{
+  "servers": {
+    "filesystem": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem@2025.8.21",
+        "${HOME}"
+      ],
+      "cwd": "${HOME}",
+      "enabled": true
+    },
+    "local_rag": {
+      "transport": "stdio",
+      "command": "python3",
+      "args": [
+        "-u",
+        "rag_mcp_server.py"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    },
+    "shell": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "build/index.js"
+      ],
+      "cwd": "${MCP_ROOT}/servers/mcp-server-commands-master",
+      "enabled": true
+    },
+    "playwright": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@automatalabs/mcp-server-playwright"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    },
+    "sqlite": {
+      "transport": "stdio",
+      "command": "${MCP_ROOT}/servers/venv_sqlite_mcp/bin/mcp-server-sqlite",
+      "args": [
+        "--db-path",
+        "sqlite.db"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    },
+    "websearch": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "servers/websearch/server.js"
+      ],
+      "cwd": "${MCP_ROOT}",
+      "enabled": true
+    },
+    "python_repl": {
+      "transport": "stdio",
+      "command": "python3",
+      "args": [
+        "python_repl_mcp.py"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    },
+    "research": {
+      "transport": "stdio",
+      "command": "python3",
+      "args": [
+        "research_mcp_server.py"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    },
+    "pollinations": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@pollinations/model-context-protocol"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    },
+    "coingecko": {
+      "transport": "sse",
+      "url": "https://mcp.api.coingecko.com/sse",
+      "enabled": true
+    },
+    "scrape": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "scrape_mcp_server.js"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    },
+    "websearch_adv": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "dist/index.js"
+      ],
+      "cwd": "${MCP_ROOT}/servers/web-search-mcp",
+      "enabled": true
+    },
+    "clock": {
+      "transport": "stdio",
+      "command": "python3",
+      "args": [
+        "clock_mcp_server.py"
+      ],
+      "cwd": "${MCP_ROOT}/servers",
+      "enabled": true
+    }
+  }
+}

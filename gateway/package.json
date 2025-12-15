@@ -1,0 +1,17 @@
+{
+  "name": "master-mcp-gateway",
+  "version": "1.0.0",
+  "description": "The Universal API Gateway for the MASTER_MCP project.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev:ui": "npm --prefix ui run dev",
+    "build:ui": "npm --prefix ui run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "uuid": "^13.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "filesystem__read_file": {
+    "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+  },
+  "websearch_adv__full-web-search": {
+    "description": "Deep web search (multi-engine + fetch) with full page content extraction. Use for complex research when simple search/snippets aren’t enough."
+  },
+  "websearch_adv__get-single-web-page-content": {
+    "description": "Advanced page extractor (fallback). Use if the primary scraper returns little; attempts robust article text extraction from a URL."
+  }
+}

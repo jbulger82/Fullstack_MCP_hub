@@ -1,0 +1,13 @@
+{
+  "name": "master-mcp-hub",
+  "version": "1.0.0",
+  "description": "The central MCP Hub for the MASTER_MCP project.",
+  "main": "McpHub.js",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.3",
+    "eventsource": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.22.4"
+  }
+}

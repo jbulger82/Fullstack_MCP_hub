@@ -1,0 +1,27 @@
+# Node and build outputs
+node_modules/
+gateway/node_modules/
+gateway/ui/node_modules/
+gateway/ui/dist/
+
+# Logs
+*.log
+gateway.log
+
+# Python caches/venvs
+__pycache__/
+*.pyc
+servers/venv_*/
+
+# RAG data (user content)
+data/rag/uploads/
+data/rag/saved_chats/
+data/rag/images/
+data/rag/indexes.pkl
+
+# Local indexes/cache
+data/rag/indexes/
+
+# OS cruft
+.DS_Store
+Thumbs.db
